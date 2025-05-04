@@ -10,6 +10,10 @@ final TextEditingController _pwController = TextEditingController();
 
  LoginPage({super.key});
 
+ void login(){
+
+ }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -56,7 +60,25 @@ final TextEditingController _pwController = TextEditingController();
               const SizedBox(height: 25),
 
               //login
-              MyButton()
+              MyButton(
+                text: "Login",
+                onTap: login,
+              ),
+
+              const SizedBox(height: 25),
+
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text("Not a member? "),
+                  Text(
+                    "Register Now",
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                    ),
+                  )
+                ],
+              )
           ],
         ),
       ),
